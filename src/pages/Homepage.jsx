@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { Container, Typography } from "@mui/material";
 import fetchRedditPosts from "../services/reddit";
+import Loader from "../components/Loader";
 
 function Homepage() {
   //All the states
@@ -61,11 +62,13 @@ function Homepage() {
   );
 
   return (
+    
     <Container maxWidth="md" sx={{ py: 4 }}>
+      {loading? <Loader /> : 
       <Typography variant="h4" align="center" sx={{ height: "100vh" }}>
         Hello
       </Typography>
-
+}
       {/* Future: map posts here */}
       {/* <PostCard post={...} /> */}
 

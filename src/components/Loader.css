@@ -1,0 +1,58 @@
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.05); /* slight dim, still transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* ensures it's on top of everything */
+    pointer-events: none; /* optional: let clicks pass through */
+  }
+  
+  .spinner {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  .center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background: #00f9ff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #00f9ff, 0 0 20px #00f9ff, 0 0 30px #00f9ff;
+  }
+  
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 3px dashed #00f9ff;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px #00f9ff40;
+  }
+  
+  /* Animations */
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
