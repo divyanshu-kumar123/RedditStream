@@ -2,7 +2,7 @@ import api from "../utils/api";
 
 //To fetch the post from the APIs - 
 const fetchRedditPosts = async (after = "") => {
-    const endpoint = after ? `/r/reactjs.json?after=${after}` : `/r/reactjs.json`;
+    const endpoint = after ? `/api/reddit?after=${after}` : `/api/reddit`;
     return api.get(endpoint)
         .then((res)=>{
             const children = res.data.data.children;
