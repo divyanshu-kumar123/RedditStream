@@ -1,0 +1,7 @@
+just create a very interactive card component in post card.jsx with seperate css file in postcard.css which is already created. 
+
+Use the card as per the post state data which is there in homepage.jsx. 
+
+Create a very interactive homepage design to show reddit card..
+
+only use the javascript and css, bootstrap and mui. dont use tailwind or typescript.
