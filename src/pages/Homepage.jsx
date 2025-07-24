@@ -68,41 +68,7 @@ function Homepage() {
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
-      <Typography variant="h3" component="h1" align="center" gutterBottom>
-        Reddit Posts
-      </Typography>
-
-      <Grid container spacing={4}>
-        {posts.map((post) => (
-          <Grid item key={post.id} xs={12} sm={6} md={4}>
-            <PostCard {...post} />
-          </Grid>
-        ))}
-      </Grid>
-      
-      {/* The ref is attached to this div.
-        On first render, it's at the top of the page and immediately visible,
-        triggering the very first `loadPosts` call.
-      */}
-      <div ref={loadMoreTriggerRef} />
-
-      {loading && (
-        <Box sx={{ display: 'flex', justifyContent: 'center', py: 4 }}>
-          <Loader />
-        </Box>
-      )}
-
-      {error && (
-        <Typography color="error" align="center" sx={{ mt: 4 }}>
-          Failed to load posts. Please try again.
-        </Typography>
-      )}
-
-      {!hasMore && !loading && posts.length > 0 && (
-        <Typography align="center" sx={{ mt: 4, color: 'text.secondary' }}>
-          You've reached the end! 👋
-        </Typography>
-      )}
+    Hello
     </Container>
   );
 }
